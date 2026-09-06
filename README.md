@@ -36,6 +36,10 @@ An end-to-end data analysis workflow examining over 99,000 emergency calls in Mo
 * **Ranked Frequency Extraction:** Grouped data by township (`twp`), aggregated call counts, and performed descending sorts to identify operational hotspots while avoiding alphabetical grouping pitfalls.
 * **Cross-Tabulation Matrix:** Constructed a two-dimensional contingency matrix of days versus hours using `pd.crosstab(calls['day'], calls['hour'])`.
 * **Chronological Reindexing:** Applied explicit weekday reindexing (`Monday` to `Sunday`) to prevent default alphabetical axis sorting (`Friday`, `Monday`, etc.) and ensure chronological readability.
+<img width="1101" height="342" alt="Screenshot 2026-09-06 at 17 05 18" src="https://github.com/user-attachments/assets/c818f3f7-27d5-48ae-9eb3-0070ccc4410c" />
+<img width="1067" height="84" alt="Screenshot 2026-09-06 at 17 05 30" src="https://github.com/user-attachments/assets/1eb2aa3c-5b1c-4184-ae86-156816cc30a5" />
+
+  
 
 ---
 
