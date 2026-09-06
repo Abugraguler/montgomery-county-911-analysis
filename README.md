@@ -5,7 +5,7 @@ An end-to-end data analysis workflow examining over 99,000 emergency calls in Mo
 
 ---
 
-## Part 1: Technical Workflow & Feature Engineering
+## Part 1: TECHNICAL WORKFLOW & FEATURE ENGINEERING 
 
 ### 1. Environment & Tools
 * **Python 3.13**
@@ -39,10 +39,26 @@ An end-to-end data analysis workflow examining over 99,000 emergency calls in Mo
 <img width="1101" height="342" alt="Screenshot 2026-09-06 at 17 05 18" src="https://github.com/user-attachments/assets/c818f3f7-27d5-48ae-9eb3-0070ccc4410c" />
 <img width="1067" height="84" alt="Screenshot 2026-09-06 at 17 05 30" src="https://github.com/user-attachments/assets/1eb2aa3c-5b1c-4184-ae86-156816cc30a5" />
 
-  
-
----
 
 ### 5. Visualization Pipeline
 * **Categorical Distributions:** Built multi-series grouped histograms to evaluate day-of-week shifts across emergency types.
 * **Heatmap Customization:** Rendered the cross-tabulated day/hour matrix with `plotly_dark` and a `YlOrRd` gradient, adding bounding box shapes (`add_shape`) and annotations to spotlight weekday rush-hour spikes (15:00–18:00).
+
+* ## Part 2: OPERATIONAL INSIGHTS & KEY TAKEAWAYS
+
+While this project primarily demonstrates a technical data cleaning and visualization pipeline, the transformed data surfaces clear operational patterns regarding municipal emergency workloads:
+
+### 1. Emergency Breakdown & Department Load
+* **EMS Leads Volume:** Emergency Medical Services (EMS) account for nearly half of all inbound dispatches, followed by traffic-related emergencies. Fire incidents represent the lowest total share of emergency volume.
+* **Stable Baselines:** Unlike traffic calls, medical and fire incidents maintain a relatively steady baseline throughout the week, reflecting routine healthcare and domestic emergencies that occur independently of work schedules.
+
+---
+
+### 2. Commute-Driven Traffic Incidents
+* **Evening Rush-Hour Spike:** Traffic-related incidents are directly tied to standard work commuting patterns. Incident frequencies build up across the afternoon and peak sharply between **4:00 PM and 5:00 PM (16:00–17:00)** as daily rush-hour congestion peaks.
+* **The Weekend Drop:** The noticeable decline in total weekend 911 calls across the county is almost entirely explained by the drop in traffic calls. Without weekday commuter traffic, road incidents hit their weekly low.
+
+---
+
+### 3. Dispatch & Resource Allocation Takeaway
+* **Dynamic Staffing:** Fixed staffing schedules throughout the week do not match actual incident demand. Emergency operations can optimize coverage and reduce response delays by dynamically concentrating traffic units and dispatch operators during the critical weekday **15:00–18:00** window.
